@@ -1,6 +1,6 @@
 /* =========================================================
    CGLUX HOME
-   Main Website Styles
+   FINAL WEBSITE STYLES
    ========================================================= */
 
 
@@ -30,8 +30,8 @@ body {
 }
 
 img {
-    width: 100%;
     display: block;
+    max-width: 100%;
 }
 
 a {
@@ -64,7 +64,9 @@ textarea {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
 
     padding: 22px 0;
@@ -83,20 +85,25 @@ textarea {
 
 .logo {
     color: #fff;
+
     font-size: 24px;
     font-weight: 600;
+
     letter-spacing: 2px;
 }
 
 .nav {
     display: flex;
     align-items: center;
+
     gap: 28px;
 }
 
 .nav a {
     color: #fff;
+
     font-size: 14px;
+
     letter-spacing: 0.5px;
 
     transition: opacity 0.3s ease;
@@ -109,7 +116,8 @@ textarea {
 .nav .quote-btn {
     padding: 10px 18px;
 
-    border: 1px solid rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+
     border-radius: 2px;
 
     transition:
@@ -120,6 +128,7 @@ textarea {
 .nav .quote-btn:hover {
     background: #fff;
     color: #222;
+
     opacity: 1;
 }
 
@@ -159,9 +168,11 @@ textarea {
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     width: min(1200px, 92%);
+
     margin: 0 auto;
 
     padding-top: 70px;
@@ -171,6 +182,7 @@ textarea {
     font-size: clamp(42px, 6vw, 72px);
 
     font-weight: 500;
+
     line-height: 1.1;
 
     letter-spacing: 1px;
@@ -180,6 +192,7 @@ textarea {
 
 .hero-content p {
     font-size: 18px;
+
     letter-spacing: 1px;
 
     margin-bottom: 32px;
@@ -187,7 +200,9 @@ textarea {
 
 .hero-buttons {
     display: flex;
+
     gap: 14px;
+
     flex-wrap: wrap;
 }
 
@@ -199,6 +214,7 @@ textarea {
     border: 1px solid #fff;
 
     font-size: 14px;
+
     letter-spacing: 0.5px;
 
     transition:
@@ -208,21 +224,25 @@ textarea {
 
 .btn-primary {
     background: #fff;
+
     color: #222;
 }
 
 .btn-primary:hover {
     background: transparent;
+
     color: #fff;
 }
 
 .btn-outline {
-    color: #fff;
     background: transparent;
+
+    color: #fff;
 }
 
 .btn-outline:hover {
     background: #fff;
+
     color: #222;
 }
 
@@ -237,12 +257,15 @@ textarea {
 
 .section-header {
     text-align: center;
+
     margin-bottom: 55px;
 }
 
 .section-header h2 {
     font-size: 38px;
+
     font-weight: 500;
+
     line-height: 1.2;
 
     margin-bottom: 15px;
@@ -250,9 +273,11 @@ textarea {
 
 .section-header p {
     max-width: 720px;
+
     margin: 0 auto;
 
     color: #666;
+
     font-size: 16px;
 }
 
@@ -281,15 +306,17 @@ textarea {
 
 .about-image img {
     width: 100%;
+
     height: 520px;
 
-    object-fit: contain;
+    object-fit: cover;
 
-    background: #f7f7f7;
+    background: #f5f5f5;
 }
 
 .about-content h2 {
     font-size: 38px;
+
     font-weight: 500;
 
     margin-bottom: 22px;
@@ -299,6 +326,7 @@ textarea {
     color: #666;
 
     font-size: 16px;
+
     line-height: 1.9;
 
     margin-bottom: 18px;
@@ -329,15 +357,17 @@ textarea {
 
 .designer-image img {
     width: 100%;
+
     height: 420px;
 
-    object-fit: contain;
+    object-fit: cover;
 
     background: #fff;
 }
 
 .designer-content h2 {
     font-size: 36px;
+
     font-weight: 500;
 
     margin-bottom: 8px;
@@ -345,6 +375,7 @@ textarea {
 
 .designer-role {
     font-size: 15px;
+
     color: #777;
 
     margin-bottom: 25px;
@@ -360,14 +391,15 @@ textarea {
 
 
 /* =========================================================
-   PRODUCTS
-   INDOOR + OUTDOOR
+   INDOOR + OUTDOOR PRODUCTS
    ========================================================= */
 
 /*
-   IMPORTANT:
-   Desktop = 2 photos per row
-   Every photo box has exactly the same size.
+   DESKTOP
+   2 cards per row.
+
+   Every image has exactly the same
+   4:3 display ratio.
 */
 
 .product-grid {
@@ -381,40 +413,47 @@ textarea {
 
 .product-card {
     width: 100%;
+
+    min-width: 0;
 }
+
+
+/*
+   IMAGE BOX
+   Every Indoor and Outdoor image
+   has exactly the same dimensions.
+*/
 
 .product-image {
     width: 100%;
 
-    /*
-       All Indoor and Outdoor images
-       use exactly the same display ratio.
-    */
     aspect-ratio: 4 / 3;
 
     overflow: hidden;
 
-    background: #f6f6f6;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #f5f5f5;
 
     margin-bottom: 22px;
 }
 
+
+/*
+   IMAGE
+   COVER makes every photo fill
+   exactly the same 4:3 area.
+*/
+
 .product-image img {
     width: 100%;
+
     height: 100%;
 
-    /*
-       Keep the whole furniture image visible.
-       This prevents different source sizes
-       from changing the card height.
-    */
-    object-fit: contain;
+    object-fit: cover;
 
-    transition: transform 0.4s ease;
+    object-position: center;
+
+    transition:
+        transform 0.4s ease;
 }
 
 .product-card:hover .product-image img {
@@ -423,6 +462,7 @@ textarea {
 
 .product-card h3 {
     font-size: 23px;
+
     font-weight: 500;
 
     margin-bottom: 9px;
@@ -432,6 +472,7 @@ textarea {
     color: #666;
 
     font-size: 15px;
+
     line-height: 1.75;
 }
 
@@ -486,7 +527,10 @@ textarea {
 
     object-fit: cover;
 
-    transition: transform 0.5s ease;
+    object-position: center;
+
+    transition:
+        transform 0.5s ease;
 }
 
 .project-card:hover img {
@@ -513,6 +557,7 @@ textarea {
 
 .project-overlay h3 {
     font-size: 24px;
+
     font-weight: 500;
 
     margin-bottom: 5px;
@@ -537,8 +582,10 @@ textarea {
     display: grid;
 
     /*
-       Desktop = 4 cards in one row
+       Desktop:
+       4 cards in one row
     */
+
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
@@ -554,9 +601,6 @@ textarea {
 .logistics-image {
     width: 100%;
 
-    /*
-       Same size for all 4 logistics photos.
-    */
     aspect-ratio: 1 / 1;
 
     overflow: hidden;
@@ -566,9 +610,12 @@ textarea {
 
 .logistics-image img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
+    object-position: center;
 }
 
 .logistics-content {
@@ -587,6 +634,7 @@ textarea {
 
 .logistics-content h3 {
     font-size: 20px;
+
     font-weight: 500;
 
     margin-bottom: 9px;
@@ -613,6 +661,7 @@ textarea {
     color: #666;
 
     font-size: 14px;
+
     letter-spacing: 0.8px;
 }
 
@@ -635,6 +684,7 @@ textarea {
 
 .contact-info h2 {
     font-size: 38px;
+
     font-weight: 500;
 
     margin-bottom: 20px;
@@ -650,6 +700,7 @@ textarea {
 
 .contact-details {
     display: flex;
+
     flex-direction: column;
 
     gap: 14px;
@@ -665,6 +716,7 @@ textarea {
 
 .contact-form {
     display: flex;
+
     flex-direction: column;
 
     gap: 15px;
@@ -684,7 +736,8 @@ textarea {
 
     background: #fff;
 
-    transition: border-color 0.3s ease;
+    transition:
+        border-color 0.3s ease;
 }
 
 .contact-form input:focus,
@@ -720,6 +773,7 @@ textarea {
 
 .contact-form button:hover {
     background: #fff;
+
     color: #222;
 }
 
@@ -740,6 +794,7 @@ textarea {
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     gap: 30px;
@@ -749,6 +804,7 @@ textarea {
 
 .footer-logo {
     font-size: 22px;
+
     letter-spacing: 2px;
 }
 
@@ -769,7 +825,8 @@ textarea {
 
     font-size: 13px;
 
-    transition: color 0.3s ease;
+    transition:
+        color 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -777,7 +834,8 @@ textarea {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-top:
+        1px solid rgba(255, 255, 255, 0.12);
 
     padding-top: 22px;
 
@@ -803,6 +861,11 @@ textarea {
         font-size: 13px;
     }
 
+    /*
+       Logistics:
+       2 cards per row on tablet.
+    */
+
     .logistics-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
@@ -810,9 +873,9 @@ textarea {
 
     .designer-grid {
         grid-template-columns: 300px 1fr;
+
         gap: 45px;
     }
-
 }
 
 
@@ -822,7 +885,9 @@ textarea {
 
 @media (max-width: 768px) {
 
-    /* HEADER */
+    /* -----------------------------------------
+       HEADER
+       ----------------------------------------- */
 
     .header {
         padding: 18px 0;
@@ -857,7 +922,9 @@ textarea {
     }
 
 
-    /* HERO */
+    /* -----------------------------------------
+       HERO
+       ----------------------------------------- */
 
     .hero {
         min-height: 680px;
@@ -880,7 +947,9 @@ textarea {
     }
 
 
-    /* SECTIONS */
+    /* -----------------------------------------
+       SECTIONS
+       ----------------------------------------- */
 
     .section {
         padding: 70px 0;
@@ -899,7 +968,9 @@ textarea {
     }
 
 
-    /* ABOUT */
+    /* -----------------------------------------
+       ABOUT
+       ----------------------------------------- */
 
     .about-grid {
         grid-template-columns: 1fr;
@@ -912,7 +983,7 @@ textarea {
 
         aspect-ratio: 4 / 3;
 
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .about-content h2 {
@@ -920,7 +991,9 @@ textarea {
     }
 
 
-    /* DESIGNER */
+    /* -----------------------------------------
+       DESIGNER
+       ----------------------------------------- */
 
     .designer-grid {
         grid-template-columns: 1fr;
@@ -939,7 +1012,7 @@ textarea {
 
         aspect-ratio: 4 / 3;
 
-        object-fit: contain;
+        object-fit: cover;
     }
 
     .designer-content h2 {
@@ -947,11 +1020,15 @@ textarea {
     }
 
 
-    /* INDOOR + OUTDOOR */
+    /* -----------------------------------------
+       INDOOR + OUTDOOR
+       ----------------------------------------- */
 
     /*
-       Mobile = one photo per row
-       Still keeps exactly the same photo box size.
+       Mobile:
+       1 card per row.
+
+       Still exactly 4:3.
     */
 
     .product-grid {
@@ -961,9 +1038,8 @@ textarea {
     }
 
     .product-image {
-        /*
-           Keep every photo box at the same ratio.
-        */
+        width: 100%;
+
         aspect-ratio: 4 / 3;
     }
 
@@ -972,7 +1048,9 @@ textarea {
     }
 
 
-    /* PROJECTS */
+    /* -----------------------------------------
+       PROJECTS
+       ----------------------------------------- */
 
     .project-grid {
         grid-template-columns: 1fr;
@@ -981,7 +1059,9 @@ textarea {
     }
 
 
-    /* LOGISTICS */
+    /* -----------------------------------------
+       LOGISTICS
+       ----------------------------------------- */
 
     .logistics-grid {
         grid-template-columns: 1fr;
@@ -994,7 +1074,9 @@ textarea {
     }
 
 
-    /* CONTACT */
+    /* -----------------------------------------
+       CONTACT
+       ----------------------------------------- */
 
     .contact-grid {
         grid-template-columns: 1fr;
@@ -1007,7 +1089,9 @@ textarea {
     }
 
 
-    /* FOOTER */
+    /* -----------------------------------------
+       FOOTER
+       ----------------------------------------- */
 
     .footer-inner {
         flex-direction: column;
@@ -1022,7 +1106,6 @@ textarea {
 
         justify-content: center;
     }
-
 }
 
 
@@ -1066,6 +1149,11 @@ textarea {
         font-size: 28px;
     }
 
+    /*
+       Keep product photos exactly 4:3
+       on small mobile screens too.
+    */
+
     .product-image {
         aspect-ratio: 4 / 3;
     }
@@ -1073,22 +1161,18 @@ textarea {
     .logistics-image {
         aspect-ratio: 4 / 3;
     }
-
 }
 
 
 /* =========================================================
-   ACCESSIBILITY / IMAGE SAFETY
+   ACCESSIBILITY
    ========================================================= */
-
-img {
-    max-width: 100%;
-}
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
     outline: 2px solid #555;
+
     outline-offset: 3px;
 }
