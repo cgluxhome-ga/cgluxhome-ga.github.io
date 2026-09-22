@@ -214,13 +214,11 @@ a {
 
 
 .hero h1 {
-    font-size: clamp(42px, 6vw, 72px);
-
+    font-size: clamp(36px, 5vw, 64px);
     line-height: 1.05;
-
     font-weight: 500;
-
     margin-bottom: 22px;
+    white-space: nowrap;
 }
 
 
