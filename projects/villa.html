@@ -4,849 +4,490 @@
 
 <head>
 
-```
 <meta charset="UTF-8">
 
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-    Villa Project | CGLUX HOME
-</title>
+<title>Luxury Villa Furniture Project | CGLUXHOME</title>
 
 <meta
-    name="description"
-    content="Villa architecture, interior design and custom furniture project by CGLUX HOME."
+name="description"
+content="Luxury villa furniture project by CGLUXHOME, combining bespoke furniture, European design and professional manufacturing."
+
 >
 
-<link
-    rel="stylesheet"
-    href="../css/style.css"
->
+<link rel="stylesheet" href="../css/style.css">
 
 <style>
 
-    /* ================= PROJECT PAGE ================= */
+/* ==================================================
+PROJECT DETAIL
+================================================== */
 
-    .project-page {
-        padding: 110px 0 90px;
-    }
+.project-detail {
+    padding: 150px 0 100px;
+    background: #ffffff;
+}
 
+.project-detail-header {
+    max-width: 850px;
+    margin-bottom: 60px;
+}
 
-    .project-page-header {
-        max-width: 900px;
-        margin-bottom: 55px;
-    }
+.project-detail-label {
+    font-size: 12px;
+    letter-spacing: 2.5px;
+    color: #888;
+    margin-bottom: 14px;
+}
 
+.project-detail-title {
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
 
-    .project-page-header .section-label {
-        display: block;
-        margin-bottom: 15px;
-    }
-
-
-    .project-page-header h1 {
-        margin: 0 0 20px;
-    }
-
-
-    .project-page-header > p {
-        font-size: 18px;
-        line-height: 1.8;
-        max-width: 780px;
-    }
-
-
-    .back-projects {
-        display: inline-block;
-        margin-top: 25px;
-        text-decoration: none;
-    }
+.project-detail-description {
+    max-width: 780px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #666;
+}
 
 
-    /* ================= OVERVIEW ================= */
+/* ==================================================
+PROJECT GALLERY
+================================================== */
 
-    .project-overview {
-        margin-bottom: 80px;
-    }
+/*
+第一行：
+villa01
+占满整行
+
+下面：
+villa02 + villa03
+villa04 + villa05
+villa06 + villa07
+*/
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    width: 100%;
+}
 
 
-    .project-overview h2,
-    .project-visuals h2,
-    .project-approach h2 {
-        margin-bottom: 25px;
-    }
+/* ==================================================
+第一张大图
+================================================== */
+
+.gallery-main {
+    grid-column: 1 / -1;
+    width: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.gallery-main img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
 
-    .project-overview > p {
-        max-width: 850px;
-        line-height: 1.8;
-    }
+/* ==================================================
+下面六张图片
+================================================== */
+
+.gallery-item {
+    width: 100%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
 
 
-    .project-details {
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        gap: 20px;
-        margin-top: 40px;
-    }
+/* ==================================================
+PROJECT INFORMATION
+================================================== */
 
+.project-info {
+    max-width: 850px;
+    margin-top: 80px;
+    padding-top: 60px;
+    border-top: 1px solid #dddddd;
+}
+
+.project-info h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+
+.project-info p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.project-back {
+    display: inline-block;
+    margin-top: 22px;
+    font-size: 15px;
+    border-bottom: 1px solid #222;
+    padding-bottom: 4px;
+    transition: opacity 0.3s ease;
+}
+
+.project-back:hover {
+    opacity: 0.6;
+}
+
+
+/* ==================================================
+MOBILE
+================================================== */
+
+@media (max-width: 700px) {
 
     .project-detail {
-        padding: 25px;
-        background: #f7f7f5;
+        padding: 120px 0 70px;
     }
 
-
-    .project-detail span {
-        display: block;
-        font-size: 13px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 10px;
-        opacity: 0.65;
+    .project-detail-header {
+        margin-bottom: 40px;
     }
 
+    .project-detail-title {
+        font-size: 38px;
+    }
 
-    .project-detail strong {
+    .project-detail-description {
         font-size: 15px;
-        line-height: 1.5;
     }
 
-
-    /* ================= PROJECT VISUALS ================= */
-
-    .project-visuals {
-        margin-bottom: 90px;
+    .project-gallery {
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
 
-
-    .project-visuals-intro {
-        max-width: 800px;
-        line-height: 1.8;
-        margin-bottom: 35px;
+    .gallery-main {
+        grid-column: 1;
     }
 
-
-    .villa-gallery {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 22px;
-    }
-
-
-    .villa-gallery .villa-image {
+    .gallery-item {
         width: 100%;
-        display: block;
-        overflow: hidden;
     }
 
-
-    .villa-gallery .villa-image:first-child {
-        grid-column: 1 / -1;
+    .project-info {
+        margin-top: 55px;
+        padding-top: 45px;
     }
 
-
-    .villa-gallery img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: contain;
+    .project-info h2 {
+        font-size: 28px;
     }
 
+}
 
-    /* ================= APPROACH ================= */
 
-    .project-approach {
-        margin-bottom: 50px;
+/* ==================================================
+SMALL MOBILE
+================================================== */
+
+@media (max-width: 500px) {
+
+    .project-detail-title {
+        font-size: 32px;
     }
 
-
-    .approach-intro {
-        max-width: 850px;
-        line-height: 1.8;
-        margin-bottom: 45px;
-    }
-
-
-    .approach-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 25px;
-    }
-
-
-    .approach-item {
-        padding: 30px;
-        background: #f7f7f5;
-    }
-
-
-    .approach-number {
-        display: block;
-        font-size: 14px;
-        letter-spacing: 1px;
-        margin-bottom: 18px;
-        opacity: 0.55;
-    }
-
-
-    .approach-item h3 {
-        margin-bottom: 12px;
-    }
-
-
-    .approach-item p {
+    .project-detail-description {
+        font-size: 15px;
         line-height: 1.7;
-        margin: 0;
     }
 
-
-    /* ================= MOBILE ================= */
-
-    @media (max-width: 900px) {
-
-        .project-details {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-
-        .approach-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-    }
-
-
-    @media (max-width: 600px) {
-
-        .project-page {
-            padding: 80px 0 60px;
-        }
-
-
-        .project-details {
-            grid-template-columns: 1fr;
-        }
-
-
-        .villa-gallery {
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-
-
-        .villa-gallery .villa-image:first-child {
-            grid-column: auto;
-        }
-
-
-        .approach-grid {
-            grid-template-columns: 1fr;
-        }
-
-    }
+}
 
 </style>
-```
 
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- ==================================================
+HEADER
+================================================== -->
 
 <header class="header">
 
-```
-<div class="container header-inner">
+<a href="../index.html" class="logo">
+CCLUX<br>HOME
+</a>
 
-    <a
-        href="../index.html"
-        class="logo"
-    >
-        CGLUX HOME
-    </a>
+<nav class="nav">
 
+<a href="../index.html#home">Home</a>
 
-    <nav class="nav">
+<a href="../index.html#about">About</a>
 
-        <a href="../index.html#home">
-            Home
-        </a>
+<a href="../index.html#indoor">Indoor</a>
 
+<a href="../index.html#outdoor">Outdoor</a>
 
-        <a href="../index.html#about">
-            About
-        </a>
+<a href="../index.html#projects">Projects</a>
 
+<a href="../index.html#delivery">Delivery</a>
 
-        <a href="../index.html#indoor">
-            Indoor
-        </a>
+<a href="../index.html#contact">Contact</a>
 
+</nav>
 
-        <a href="../index.html#outdoor">
-            Outdoor
-        </a>
+<a
+href="../index.html#contact"
+class="header-btn"
 
+>
 
-        <a href="../index.html#projects">
-            Projects
-        </a>
-
-
-        <a href="../index.html#logistics">
-            Logistics
-        </a>
-
-
-        <a href="../index.html#contact">
-            Contact
-        </a>
-
-    </nav>
-
-
-    <a
-        href="../index.html#contact"
-        class="header-cta"
-    >
-        Get Quote
-    </a>
-
-</div>
-```
+Get Quote </a>
 
 </header>
 
-<!-- ================= PROJECT PAGE ================= -->
+<!-- ==================================================
+PROJECT DETAIL
+================================================== -->
 
-<main class="project-page">
+<section class="project-detail">
 
-```
 <div class="container">
 
-
-    <!-- ================= PROJECT HEADER ================= -->
-
-    <div class="project-page-header">
-
-        <span class="section-label">
-            RESIDENTIAL · VILLA
-        </span>
-
-
-        <h1>
-            Villa Project
-        </h1>
-
-
-        <p>
-            Architecture, interior design and custom furniture
-            solutions created for a refined residential space.
-        </p>
-
-
-        <a
-            href="../index.html#projects"
-            class="back-projects text-link"
-        >
-            ← Back to Projects
-        </a>
-
-    </div>
-
-
-
-    <!-- ================= PROJECT OVERVIEW ================= -->
-
-    <section class="project-overview">
-
-        <h2>
-            Project Overview
-        </h2>
-
-
-        <h2>
-            A Complete Residential Design Approach
-        </h2>
-
-
-        <p>
-            This villa project brings together architectural design,
-            interior spaces and custom furniture into one coherent
-            residential concept.
-        </p>
-
-
-        <p>
-            The furniture is developed according to the proportions,
-            materials, colors and functional requirements of the
-            interior, creating a consistent relationship between
-            architecture and furniture.
-        </p>
-
-
-        <p>
-            CGLUX HOME coordinates the furniture customization and
-            manufacturing process in China, helping transform the
-            design concept into finished products.
-        </p>
-
-
-
-        <div class="project-details">
-
-
-            <div class="project-detail">
-
-                <span>
-                    Project Type
-                </span>
-
-                <strong>
-                    Luxury Villa
-                </strong>
-
-            </div>
-
-
-
-            <div class="project-detail">
-
-                <span>
-                    Design
-                </span>
-
-                <strong>
-                    Architecture · Interior · Furniture
-                </strong>
-
-            </div>
-
-
-
-            <div class="project-detail">
-
-                <span>
-                    Furniture
-                </span>
-
-                <strong>
-                    Custom Made
-                </strong>
-
-            </div>
-
-
-
-            <div class="project-detail">
-
-                <span>
-                    Manufacturing
-                </span>
-
-                <strong>
-                    China
-                </strong>
-
-            </div>
-
-
-
-            <div class="project-detail">
-
-                <span>
-                    Service
-                </span>
-
-                <strong>
-                    Design to Furniture Delivery
-                </strong>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= PROJECT VISUALS ================= -->
-
-    <section class="project-visuals">
-
-        <span class="section-label">
-            PROJECT VISUALS
-        </span>
-
-
-        <h2>
-            Architecture & Interior
-        </h2>
-
-
-        <p class="project-visuals-intro">
-            A selection of architectural and interior visuals
-            showing the design direction of the villa project.
-        </p>
-
-
-
-        <!-- 7 IMAGE GALLERY -->
-
-        <div class="villa-gallery">
-
-
-            <!-- ROW 1 : ONE LARGE IMAGE -->
-
-            <div class="villa-image">
-
-                <img
-                    src="../assets/images/hero/Projects/villa01.png"
-                    alt="CGLUX HOME luxury villa project"
-                >
-
-            </div>
-
-
-
-            <!-- ROW 2 : TWO IMAGES -->
-
-            <div class="villa-image">
-
-                <img
-                    src="../assets/images/hero/Projects/villa02.png"
-                    alt="Luxury villa architecture and interior"
-                >
-
-            </div>
-
-
-            <div class="villa-image">
-
-                <img
-                    src="../assets/images/hero/Projects/villa03.png"
-                    alt="Villa interior design"
-                >
-
-            </div>
-
-
-
-            <!-- ROW 3 : TWO IMAGES -->
-
-            <div class="villa-image">
-
-                <img
-                    src="../assets/images/hero/Projects/villa04.png"
-                    alt="Villa living space"
-                >
-
-            </div>
-
-
-            <div class="villa-image">
-
-                <img
-                    src="../assets/images/hero/Projects/villa05.png"
-                    alt="Custom villa furniture"
-                >
-
-            </div>
-
-
-
-            <!-- ROW 4 : TWO IMAGES -->
-
-            <div class="villa-image">
-
-                <img
-                    src="../assets/images/hero/Projects/villa06.png"
-                    alt="Villa interior furniture"
-                >
-
-            </div>
-
-
-            <div class="villa-image">
-
-                <img
-                    src="../assets/images/hero/Projects/villa07.png"
-                    alt="Luxury residential furniture project"
-                >
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ================= OUR APPROACH ================= -->
-
-    <section class="project-approach">
-
-        <span class="section-label">
-            OUR APPROACH
-        </span>
-
-
-        <h2>
-            From Design to Furniture
-        </h2>
-
-
-        <p class="approach-intro">
-            CGLUX HOME connects European design expertise with
-            professional furniture manufacturing in China to provide
-            a coordinated solution for international residential
-            projects.
-        </p>
-
-
-
-        <div class="approach-grid">
-
-
-            <div class="approach-item">
-
-                <span class="approach-number">
-                    01
-                </span>
-
-
-                <h3>
-                    Architecture
-                </h3>
-
-
-                <p>
-                    Architectural concepts and spatial planning
-                    establish the overall direction of the project.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach-item">
-
-                <span class="approach-number">
-                    02
-                </span>
-
-
-                <h3>
-                    Interior Design
-                </h3>
-
-
-                <p>
-                    Interior materials, proportions, colors and
-                    details are coordinated to create a unified
-                    living environment.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach-item">
-
-                <span class="approach-number">
-                    03
-                </span>
-
-
-                <h3>
-                    Custom Furniture
-                </h3>
-
-
-                <p>
-                    Furniture is customized to fit the space,
-                    design concept and functional requirements
-                    of the project.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach-item">
-
-                <span class="approach-number">
-                    04
-                </span>
-
-
-                <h3>
-                    Manufacturing
-                </h3>
-
-
-                <p>
-                    Approved furniture designs are coordinated
-                    with professional factories in China.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach-item">
-
-                <span class="approach-number">
-                    05
-                </span>
-
-
-                <h3>
-                    Quality Control
-                </h3>
-
-
-                <p>
-                    Production follow-up and quality inspection
-                    help ensure the furniture meets project
-                    requirements.
-                </p>
-
-            </div>
-
-
-
-            <div class="approach-item">
-
-                <span class="approach-number">
-                    06
-                </span>
-
-
-                <h3>
-                    Packing & Delivery
-                </h3>
-
-
-                <p>
-                    Professional packing and international
-                    shipping coordination complete the process.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
+<!-- ==================================================
+PROJECT HEADER
+================================================== -->
+
+<div class="project-detail-header">
+
+<p class="project-detail-label">
+SELECTED PROJECT
+</p>
+
+<h1 class="project-detail-title">
+Luxury Villa
+</h1>
+
+<p class="project-detail-description">
+A bespoke furniture solution created for a contemporary luxury villa.
+The project combines refined European aesthetics, functional design
+and customized furniture tailored to the character of each space.
+</p>
 
 </div>
-```
 
-</main>
+<!-- ==================================================
+7 IMAGE PROJECT GALLERY
+================================================== -->
 
-<!-- ================= FOOTER ================= -->
+<div class="project-gallery">
+
+<!-- ==================================================
+ROW 1 — LARGE IMAGE
+================================================== -->
+
+<div class="gallery-main">
+
+<img
+src="../assets/images/hero/Projects/villa01.png"
+alt="Luxury villa interior by CGLUXHOME"
+
+>
+
+</div>
+
+<!-- ==================================================
+ROW 2
+================================================== -->
+
+<div class="gallery-item">
+
+<img
+src="../assets/images/hero/Projects/villa02.png"
+alt="Luxury villa living room furniture"
+
+>
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="../assets/images/hero/Projects/villa03.png"
+alt="Custom villa furniture"
+
+>
+
+</div>
+
+<!-- ==================================================
+ROW 3
+================================================== -->
+
+<div class="gallery-item">
+
+<img
+src="../assets/images/hero/Projects/villa04.png"
+alt="Luxury villa interior furniture"
+
+>
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="../assets/images/hero/Projects/villa05.png"
+alt="Luxury villa dining area"
+
+>
+
+</div>
+
+<!-- ==================================================
+ROW 4
+================================================== -->
+
+<div class="gallery-item">
+
+<img
+src="../assets/images/hero/Projects/villa06.png"
+alt="Luxury villa bedroom furniture"
+
+>
+
+</div>
+
+<div class="gallery-item">
+
+<img
+src="../assets/images/hero/Projects/villa07.png"
+alt="Luxury villa custom furniture"
+
+>
+
+</div>
+
+</div>
+
+<!-- ==================================================
+PROJECT INFORMATION
+================================================== -->
+
+<div class="project-info">
+
+<h2>
+Furniture & Interior Solutions
+</h2>
+
+<p>
+CGLUXHOME provides customized furniture solutions for luxury
+residential projects, including sofas, dining furniture, bedroom
+furniture, storage solutions, rugs and outdoor furniture.
+</p>
+
+<p>
+From design coordination and furniture sourcing to manufacturing
+and international delivery, we provide a complete solution tailored
+to each project.
+</p>
+
+<a
+href="../index.html#projects"
+class="project-back"
+
+>
+
+← Back to Projects </a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==================================================
+FOOTER
+================================================== -->
 
 <footer class="footer">
 
-```
-<div class="container footer-inner">
+<div class="container">
 
+<div class="footer-content">
 
-    <div class="footer-brand">
+<div>
 
-        <a
-            href="../index.html"
-            class="footer-logo"
-        >
-            CGLUX HOME
-        </a>
+<h3>
+CGLUXHOME
+</h3>
 
-
-        <p>
-            European Design · Custom Furniture · Worldwide Delivery
-        </p>
-
-    </div>
-
-
-
-    <div class="footer-contact">
-
-        <span>
-            WhatsApp
-        </span>
-
-
-        <a
-            href="https://wa.me/8618126791433"
-            target="_blank"
-            rel="noopener"
-        >
-            🇨🇳 +86 181 2679 1433
-        </a>
-
-
-        <a
-            href="https://wa.me/34645591242"
-            target="_blank"
-            rel="noopener"
-        >
-            🇪🇸 +34 645 591 242
-        </a>
-
-
-        <a
-            href="mailto:cgluxhome@gmail.com"
-        >
-            cgluxhome@gmail.com
-        </a>
-
-    </div>
-
-
-
-    <div class="footer-links">
-
-        <a href="../index.html#home">
-            Home
-        </a>
-
-
-        <a href="../index.html#about">
-            About
-        </a>
-
-
-        <a href="../index.html#projects">
-            Projects
-        </a>
-
-
-        <a href="../index.html#contact">
-            Contact
-        </a>
-
-    </div>
+<p>
+Custom Furniture · European Design · Worldwide Delivery
+</p>
 
 </div>
 
+<div class="footer-links">
 
+<a href="../index.html#home">
+Home
+</a>
 
-<div class="container footer-bottom">
+<a href="../index.html#about">
+About
+</a>
 
-    <p>
-        © 2026 CGLUX HOME. All Rights Reserved.
-    </p>
+<a href="../index.html#indoor">
+Indoor
+</a>
+
+<a href="../index.html#outdoor">
+Outdoor
+</a>
+
+<a href="../index.html#projects">
+Projects
+</a>
+
+<a href="../index.html#delivery">
+Delivery
+</a>
+
+<a href="../index.html#contact">
+Contact
+</a>
 
 </div>
-```
+
+</div>
+
+<p class="copyright">
+© 2026 CGLUXHOME. All Rights Reserved.
+</p>
+
+</div>
 
 </footer>
 
