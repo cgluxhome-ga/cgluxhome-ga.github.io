@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hospitality Project | CGLUX HOME</title>
+
+<meta
+name="description"
+content="Hospitality interior design and custom furniture solutions by CGLUX HOME for hotels, resorts and international hospitality projects."
+>
+
+<link
+rel="canonical"
+href="https://cgluxhome-ga.github.io/projects/hospitality.html"
+>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+/* ================= PROJECT PAGE ================= */
+
+.project-detail-page {
+    background: #fff;
+    color: #222;
+}
+
+
+/* ================= PROJECT HERO ================= */
+
+.project-detail-hero {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    min-height: 520px;
+
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.30),
+            rgba(0,0,0,0.30)
+        ),
+        url("../assets/images/hero/Projects/pjj003.png");
+
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    color: #fff;
+}
+
+
+.project-detail-hero-content {
+    max-width: 850px;
+    padding: 40px 25px;
+}
+
+
+.project-detail-hero-label {
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+.project-detail-hero h1 {
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+
+.project-detail-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* ================= BACK BUTTON ================= */
+
+.project-back {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 25px 0;
+}
+
+
+.project-back a {
+    font-size: 14px;
+    color: #555;
+    transition: 0.3s;
+}
+
+
+.project-back a:hover {
+    color: #000;
+}
+
+
+/* ================= PROJECT INTRO ================= */
+
+.project-intro {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 25px 70px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+
+.project-intro h2 {
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+
+
+.project-intro p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: #666;
+    margin-bottom: 18px;
+}
+
+
+/* ================= PROJECT DETAILS ================= */
+
+.project-details {
+    border-top: 1px solid #ddd;
+    padding-top: 30px;
+}
+
+
+.project-detail-item {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+
+.project-detail-item strong {
+    font-weight: 500;
+    color: #222;
+}
+
+
+.project-detail-item span {
+    color: #666;
+}
+
+
+/* ================= PROJECT GALLERY ================= */
+
+.hospitality-gallery-section {
+    background: #f7f7f7;
+    padding: 90px 25px;
+}
+
+
+.hospitality-gallery-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.hospitality-gallery-header {
+    margin-bottom: 45px;
+}
+
+
+.hospitality-gallery-header h2 {
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+
+.hospitality-gallery-header p {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+.hospitality-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+
+.hospitality-gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* ================= SOLUTIONS ================= */
+
+.project-solutions {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 25px;
+}
+
+
+.project-solutions-header {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+
+.project-solutions-header h2 {
+    font-size: 38px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+
+.project-solutions-header p {
+    color: #666;
+    line-height: 1.8;
+}
+
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+.solution-card {
+    border: 1px solid #e5e5e5;
+    padding: 35px 30px;
+    background: #fff;
+}
+
+
+.solution-number {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #999;
+    margin-bottom: 20px;
+}
+
+
+.solution-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 14px;
+}
+
+
+.solution-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #666;
+}
+
+
+/* ================= CTA ================= */
+
+.project-cta {
+    background: #f4f4f4;
+    padding: 90px 25px;
+    text-align: center;
+}
+
+
+.project-cta h2 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+
+
+.project-cta p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+
+    color: #666;
+    line-height: 1.8;
+}
+
+
+.project-cta a {
+    display: inline-block;
+
+    padding: 15px 32px;
+
+    background: #222;
+    color: #fff;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.project-cta a:hover {
+    background: #444;
+}
+
+
+/* ================= FOOTER ================= */
+
+.project-footer {
+    background: #111;
+    color: #fff;
+
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+
+.project-footer p {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+
+.project-footer a {
+    color: #fff;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .project-detail-hero {
+        height: 65vh;
+        min-height: 450px;
+    }
+
+
+    .project-detail-hero h1 {
+        font-size: 46px;
+    }
+
+
+    .project-intro {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding-top: 70px;
+    }
+
+
+    .solution-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .project-detail-hero {
+        height: 60vh;
+        min-height: 420px;
+    }
+
+
+    .project-detail-hero h1 {
+        font-size: 38px;
+    }
+
+
+    .project-detail-hero p {
+        font-size: 16px;
+    }
+
+
+    .project-intro {
+        padding: 60px 20px;
+    }
+
+
+    .project-intro h2 {
+        font-size: 32px;
+    }
+
+
+    .project-detail-item {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+
+    .hospitality-gallery-section {
+        padding: 60px 20px;
+    }
+
+
+    .hospitality-gallery-header h2 {
+        font-size: 32px;
+    }
+
+
+    .project-solutions {
+        padding: 60px 20px;
+    }
+
+
+    .project-solutions-header h2 {
+        font-size: 32px;
+    }
+
+
+    .solution-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .project-cta {
+        padding: 65px 20px;
+    }
+
+
+    .project-cta h2 {
+        font-size: 32px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="project-detail-page">
+
+
+<!-- ================= HERO ================= -->
+
+<section class="project-detail-hero">
+
+    <div class="project-detail-hero-content">
+
+        <div class="project-detail-hero-label">
+            Hospitality · Hotel & Resort
+        </div>
+
+        <h1>
+            Hospitality Project
+        </h1>
+
+        <p>
+            Interior design and custom furniture solutions
+            for hotels, resorts and hospitality spaces.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= BACK ================= -->
+
+<div class="project-back">
+
+    <a href="../index.html#projects">
+        ← Back to Projects
+    </a>
+
+</div>
+
+
+<!-- ================= PROJECT INTRO ================= -->
+
+<section class="project-intro">
+
+    <div>
+
+        <h2>
+            Designed for Hospitality
+        </h2>
+
+        <p>
+            CGLUX HOME provides integrated interior and furniture
+            solutions for hospitality projects, combining design
+            expertise with professional furniture sourcing and
+            manufacturing in China.
+        </p>
+
+        <p>
+            From hotel and resort interiors to custom furniture,
+            we coordinate the process from design development
+            and product selection to manufacturing, quality
+            inspection, professional packing and international delivery.
+        </p>
+
+        <p>
+            Our goal is to create comfortable, functional and
+            visually consistent spaces while providing a practical
+            furniture solution for international projects.
+        </p>
+
+    </div>
+
+
+    <div class="project-details">
+
+        <div class="project-detail-item">
+
+            <strong>
+                Project Type
+            </strong>
+
+            <span>
+                Hotel · Resort · Hospitality
+            </span>
+
+        </div>
+
+
+        <div class="project-detail-item">
+
+            <strong>
+                Design
+            </strong>
+
+            <span>
+                Interior Design · Furniture Design
+            </span>
+
+        </div>
+
+
+        <div class="project-detail-item">
+
+            <strong>
+                Furniture
+            </strong>
+
+            <span>
+                Custom & Sourced Furniture
+            </span>
+
+        </div>
+
+
+        <div class="project-detail-item">
+
+            <strong>
+                Manufacturing
+            </strong>
+
+            <span>
+                China
+            </span>
+
+        </div>
+
+
+        <div class="project-detail-item">
+
+            <strong>
+                Service
+            </strong>
+
+            <span>
+                Furniture Solution & International Delivery
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="hospitality-gallery-section">
+
+    <div class="hospitality-gallery-container">
+
+        <div class="hospitality-gallery-header">
+
+            <h2>
+                Hospitality Interior
+            </h2>
+
+            <p>
+                A hospitality environment combining
+                interior design, furniture selection and
+                custom manufacturing.
+            </p>
+
+        </div>
+
+
+        <div class="hospitality-gallery">
+
+            <img
+                src="../assets/images/hero/Projects/pjj003.png"
+                alt="CGLUX HOME hospitality interior project"
+                class="hospitality-gallery-image"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SOLUTIONS ================= -->
+
+<section class="project-solutions">
+
+    <div class="project-solutions-header">
+
+        <h2>
+            From Design to Delivery
+        </h2>
+
+        <p>
+            CGLUX HOME coordinates design, furniture sourcing
+            and manufacturing to provide a complete solution
+            for international hospitality projects.
+        </p>
+
+    </div>
+
+
+    <div class="solution-grid">
+
+
+        <div class="solution-card">
+
+            <div class="solution-number">
+                01
+            </div>
+
+            <h3>
+                Concept & Interior Design
+            </h3>
+
+            <p>
+                Developing interior concepts and furniture
+                directions based on the project's style,
+                function and requirements.
+            </p>
+
+        </div>
+
+
+        <div class="solution-card">
+
+            <div class="solution-number">
+                02
+            </div>
+
+            <h3>
+                Furniture Design
+            </h3>
+
+            <p>
+                Furniture solutions designed to coordinate
+                with the overall interior concept and project needs.
+            </p>
+
+        </div>
+
+
+        <div class="solution-card">
+
+            <div class="solution-number">
+                03
+            </div>
+
+            <h3>
+                Furniture Sourcing
+            </h3>
+
+            <p>
+                Selecting suitable furniture, materials and
+                suppliers from China's manufacturing network.
+            </p>
+
+        </div>
+
+
+        <div class="solution-card">
+
+            <div class="solution-number">
+                04
+            </div>
+
+            <h3>
+                Custom Manufacturing
+            </h3>
+
+            <p>
+                Coordinating customized furniture production
+                according to approved designs and specifications.
+            </p>
+
+        </div>
+
+
+        <div class="solution-card">
+
+            <div class="solution-number">
+                05
+            </div>
+
+            <h3>
+                Quality Control
+            </h3>
+
+            <p>
+                Following production and checking furniture
+                quality before packing and shipment.
+            </p>
+
+        </div>
+
+
+        <div class="solution-card">
+
+            <div class="solution-number">
+                06
+            </div>
+
+            <h3>
+                Packing & Delivery
+            </h3>
+
+            <p>
+                Professional packing and international shipping
+                coordination to help furniture arrive safely.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="project-cta">
+
+    <h2>
+        Have a Hospitality Project?
+    </h2>
+
+    <p>
+        Tell us about your hotel, resort or hospitality project.
+        We can help coordinate furniture design, sourcing,
+        manufacturing and delivery from China.
+    </p>
+
+    <a href="../index.html#contact">
+        Request a Quote
+    </a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="project-footer">
+
+    <p>
+        European Design · Custom Furniture · Worldwide Delivery
+    </p>
+
+    <p>
+        © 2026 CGLUX HOME. All Rights Reserved.
+    </p>
+
+    <p>
+        <a href="../index.html">
+            CGLUX HOME
+        </a>
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
